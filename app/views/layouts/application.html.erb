@@ -13,6 +13,13 @@
   </head>
 
   <body>
+    <div class="navbar-cocktail">
+      <div class="title"><h1>Welcome to Mr. Cocktails!</h1></div>
+      <div class="nvb-btns">
+        <div class="home-page"><%= link_to "Return to cocktails list", root_path, { class: "btn btn-root"} %></div>
+        <div class="new-cocktail"><%= link_to "Create new cocktail", cocktails_new_path, { class: "btn btn-new-cocktail"} %></div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

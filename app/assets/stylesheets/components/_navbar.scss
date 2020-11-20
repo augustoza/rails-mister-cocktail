@@ -10,3 +10,19 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-cocktail {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(207, 195, 195);
+  h1 {
+    margin-top: 35px;
+    margin-left: 25px;
+  }
+}
+
+.nvb-btns {
+  display: flex;
+  align-items: center;
+}

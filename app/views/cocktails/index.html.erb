@@ -1,8 +1,9 @@
 <div>
-  <% @cocktails.each do |cocktail| %>
-  <div>
-    <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-  </div>
+  <div class="wrapper">
+    <% @cocktails.each do |cocktail| %>
+    <div class="cocktails-div">
+      <%= link_to cocktail.name, cocktail_path(cocktail), {class: "username_link"} %>
+    </div>
   <% end %>
+  </div>
 </div>
-<%= link_to "Create new cocktail", cocktails_new_path %>

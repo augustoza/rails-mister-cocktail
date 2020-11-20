@@ -1,11 +1,27 @@
-<h1> <%= @cocktail.name %></h1>
-
+<div class="titles">
+  <div class="show-titles">
+    <h1 id="show-title"> <%= @cocktail.name %></h1>
+  </div>
+  <div class="show-doses">
+    <%= link_to "Add a dose to this cocktail", new_cocktail_dose_path(@cocktail.id), { class: "btn btn-doses" } %>
+  </div>
+</div>
+<% unless @cocktail.doses.empty? %>
+<h2>Doses</h2>
 <% @cocktail.doses.each do |dose| %>
-<p><%= "#{dose.description.capitalize} - #{dose.ingredient.name.capitalize} - " %> <%= link_to "Delete this dose",
-                                                                                              dose_path(dose),
-                                                                                              method: :delete,
-                                                                                              data: { confirm: "Are you sure?" } %> </p>
-
+  <div class="doses-list">
+    <div class="dose-title">
+      <%=dose.description.capitalize%>
+    </div>
+    <div class="dose-ingredient">
+      <%=dose.ingredient.name.capitalize%> 
+    </div>
+    <%= link_to "Delete this dose",
+        dose_path(dose),
+        class: "btn dose-delete",
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+  </div>
 <% end %>
-<%= link_to "Add doses to this cocktail", new_cocktail_dose_path(@cocktail.id) %>
-<%= link_to "Return to cocktails list", cocktails_path %>
+<% end %>
+

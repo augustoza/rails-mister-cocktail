@@ -1,3 +1,65 @@
-// Place all the styles related to the cocktails controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.cocktale {
+  height: 80px;
+  width: 80px;
+}
+
+.username_link {
+  height: 170px;
+  width: 230px;
+  margin-top: 45px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-image: asset-url('Beer.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  filter: brightness(95%);  
+}
+
+.dose-title {
+  margin-left: 30px;
+  position: absolute;
+}
+
+.dose-ingredient {
+  margin-left: 50px;
+  position: absolute;
+  left: 30%;
+}
+
+.doses-list {
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+}
+
+ .username_link:hover {
+   color: white;
+   text-decoration: none;
+   filter: brightness(70%);
+ }
+
+ .titles {
+   height: 100px;
+   display: flex;
+   align-items: center;
+ }
+
+ .show-titles {
+   margin-left: 40px;
+ }
+
+ .show-doses {
+   margin-left: 35%;
+ }
